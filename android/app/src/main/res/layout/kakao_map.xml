@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".MapActivity">
+
+    <RelativeLayout
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/linerTopButtons"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"
+            android:gravity="right"
+            android:paddingRight="8dp">
+        <ImageButton
+                android:id="@+id/imageButtonCompass"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/ic_compass"
+                android:background="@color/white"
+                android:layout_marginTop="8dp"/>
+
+        <ImageButton
+                android:id="@+id/imageButtonLayers"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                app:srcCompat="@drawable/ic_layers" />
+
+        <ImageButton
+                android:id="@+id/imageButtonWalkingHistory"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/ic_map"
+                android:background="@color/white"
+                android:layout_marginTop="8dp"/>
+        <ImageButton
+                android:id="@+id/imageButtonSetting"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/ic_settings"
+                android:background="@color/white"
+                android:layout_marginTop="8dp"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+        <LinearLayout
+                android:id="@+id/linearBottomLatitude"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/txtView_coordinate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="10dp"
+                    android:text="Coordinate :"
+                    android:textColor="@color/red"
+                    android:textSize="16dp" />
+
+            <TextView
+                    android:id="@+id/txtView_current_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="10dp"
+                    android:text="0.0 , 0.0"
+                    android:textColor="@color/red"
+                    android:textSize="16dp" />
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/btnCurrentLocation"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/round_button"
+                android:contentDescription="@string/current_location"
+                android:gravity="center_horizontal|top"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                app:icon="@android:drawable/ic_menu_mylocation"
+                app:iconSize="26dp"/>
+    </LinearLayout>
+</RelativeLayout>
